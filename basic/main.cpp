@@ -18,6 +18,7 @@ int main() {
 
   // Sprite to obrazek, który ma swoją pozycję na ekranie i inne ciekawe rzeczy, można go przesuwać, obracać,
   // i wykonywać inne podobne czynności.
+  // Dokumentacja: https://www.sfml-dev.org/documentation/3.0.2/classsf_1_1Sprite.html
   sf::Sprite kwiatek(texture);
   sf::Sprite kwiatek2(texture);
   kwiatek2.setPosition({400, 300});
@@ -42,16 +43,15 @@ int main() {
         window.close();
       }
       window.clear();
-
-      // Aby nasze kwiatki pojawiły się na ekranie, musimy wywołać funkcję "draw".
-      // Można myśleć o tym tak, że draw po prostu wkleja rysunek na ekran, jak Ctrl-C Ctrl-V w paincie
-      window.draw(kwiatek);
-      window.draw(kwiatek2);
-
-      // Window.display() służy do akutalizacji okienka widzianego przez użytkownika. W ten sposób nigdy 
-      // nie widać takiego "połowicznego narysowania", dopóki nie zrobimy window.display() to okienko się nie aktualizuje
-      window.display();
-
     }
+
+    // Aby nasze kwiatki pojawiły się na ekranie, musimy wywołać funkcję "draw".
+    // Można myśleć o tym tak, że draw po prostu wkleja rysunek na ekran, jak Ctrl-C Ctrl-V w paincie
+    window.draw(kwiatek);
+    window.draw(kwiatek2);
+
+    // Window.display() służy do akutalizacji okienka widzianego przez użytkownika. W ten sposób nigdy 
+    // nie widać takiego "połowicznego narysowania", dopóki nie zrobimy window.display() to okienko się nie aktualizuje
+    window.display();
   }
 }
