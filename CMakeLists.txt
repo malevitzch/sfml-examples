@@ -19,3 +19,4 @@ FetchContent_Declare(SFML
 FetchContent_MakeAvailable(SFML)
 
 add_subdirectory(basic)
+add_subdirectory(controls)
